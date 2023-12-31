@@ -8,6 +8,13 @@
 
 #include "BMP180.h"
 
+// Definitions to avoid errro for multiple declarations:
+int oversampling;
+
+short int ac1, ac2, ac3, b1, b2, mb, mc, md;
+unsigned short int ac4, ac5, ac6;
+
+
 // Read two words from the BMP085 and supply it as a 16 bit integer
 int i2cReadInt(int fd, int address);
 

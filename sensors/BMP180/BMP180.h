@@ -27,10 +27,11 @@
 #define BMP180_READTEMPCMD       0x2E
 #define BMP180_READPRESSURECMD   0x34
 
-int oversampling;
+// Adding extern to avoid error
+extern int oversampling;
 
-short int ac1, ac2, ac3, b1, b2, mb, mc, md;
-unsigned short int ac4, ac5, ac6;
+extern short int ac1, ac2, ac3, b1, b2, mb, mc, md;
+extern unsigned short int ac4, ac5, ac6;
 
 int begin(int fd);
 

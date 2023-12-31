@@ -9,5 +9,5 @@ console.log("BMP180:", data);
 data = sensors.getHTU21D();
 console.log("HTU21D:", data);
 
-data = sensors.getMH_Z19();
-console.log("MH_Z19:", data);
+//data = sensors.getMH_Z19();
+//console.log("MH_Z19:", data);
