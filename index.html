@@ -76,7 +76,6 @@
           fetch("./data/BH1750.json"),
           fetch("./data/BMP180.json"),
           fetch("./data/HTU21D.json"),
-          fetch("./data/MH_Z19.json"),
         ]);
         const data = (await Promise.all(res.map((r) => r.json()))).reduce(
           (item, data) => ({
@@ -101,9 +100,6 @@
           ).innerHTML = new Intl.NumberFormat().format(
             Math.round(data.humidity)
           );
-          document.querySelector(
-            "#co2 .value"
-          ).innerHTML = new Intl.NumberFormat().format(data.co2);
           document.querySelector(
             "#pressure .value"
           ).innerHTML = new Intl.NumberFormat().format(
