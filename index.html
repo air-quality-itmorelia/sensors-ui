@@ -7,8 +7,77 @@
 			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 			/>
 		<title>Air Quality Monitor</title>
+
+		<!-- date and time managment libraries -->
+		<script src="lib/moment.min.js"></script>
+		<script src="lib/moment-timezone-with-data-2012-2022.min.js"></script>
+
+		<!-- font Lato used -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link 
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="lib/semantic.min.css" />
+		<link rel="stylesheet" href="./index.css" />
+		
+		<!-- sound reource -->
+		<embed
+			src="./sounds/alert.mp3"
+			autostart="false"
+			width="0"
+			height"0"
+			id="alert"
+			enablejavascript="true"
+			/>
 	</head>
 		<body>
-			Hello Raspberry Zero
+			<div class="ui container summary">
+				<div class="ui grid">
+					<div id="temperature" class="eight wide column sensor-item">
+						<div class="heading">
+							<img class="svg-icon" src="./images/thermometer.svg"/>
+						Temperature	
+						</div>
+						<div class="value-container">
+							<span class="value"></span>
+							<span class="unit">oC</span>
+						</div>
+					</div>
+					<div id="humidity" class="eight wide column sensor-item">
+						<div class="heading">
+							<img class="svg-icon" src="./images/water-outline.svg"/>
+						Humidity
+						</div>
+						<div class="value-container">
+							<span class="value"></span>
+							<span class="unit">%</span>
+						</div>
+					</div>
+					<div id="co2" class="sixteen wide column sensor-item">
+						<div class="heading">
+							<img class="svg-icon" src="./images/cloud-outline.svg"/>
+							CO2	
+						</div>
+						<div class="value-container">
+							<span class="value"></span>
+							<span class="unit">ppm</span>
+						</div>
+					</div>
+					<div id="pressure" class="sixteen wide column sensor-item">
+						<div class="heading">
+							<img class="svg-icon" src="./images/sunny-outline.svg"/>
+							Pressure
+						</div>
+						<div class="value-container">
+							<span class="value"></span>
+							<span class="unit">hPa</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</body>
 </html>
